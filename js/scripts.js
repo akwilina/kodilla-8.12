@@ -53,12 +53,13 @@ function newGame() {
         gameState = 'started';
         setGameElements();
 
-        playerNameElem.innerHTML = player.name; // setGamePoints(); // ta funkcja jeszcze nie powstała
-    }
-}
+        playerNameElem.innerHTML = player.name;
 
-function playerPick(playerPick) {
-    console.log(playerPick);
+        function setGamePoints() {
+            playerPointsElem.innerHTML = player.score;
+            computerPointsElem.innerHTML = computer.score;
+        }
+    }
 }
 
 function getComputerPick() {
@@ -109,8 +110,8 @@ function playerPick(playerPick) {
     checkRoundWinner(playerPick, computerPick);
 }
 
-function setGamePoints() {
-    playerPointsElem.innerHTML = player.score;
-    computerPointsElem.innerHTML = computer.score;
+var playerWon = player.score === maxScore ;
+if (playerWon || computer.score === maxScore) {
+    alert(playerWon ? 'Zwyciężyłeś' : 'Przegrałeś');
+    newGame();
 }
-
