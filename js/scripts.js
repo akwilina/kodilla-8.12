@@ -109,9 +109,9 @@ function checkGameWinner() {
 			alert("Gratulations! You won!");
 		}
 		else {
-            alert("You lost the game, computer won!");
-        }
-			gameState = "ended";
-			setGameElements();
+			alert("You lost the game, computer won!");
+		}
+		gameState = "ended";
+		setGameElements();
 	}
 }
