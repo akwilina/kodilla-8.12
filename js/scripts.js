@@ -107,13 +107,11 @@ function checkGameWinner() {
 	if (player.score === 10 || computer.score === 10) {
 		if (player.score > computer.score) {
 			alert("Gratulations! You won!");
-			gameState = "ended";
-			setGameElements();
 		}
 		else {
-			alert("You lost the game, computer won!");
+            alert("You lost the game, computer won!");
+        }
 			gameState = "ended";
 			setGameElements();
-		}
 	}
 }
